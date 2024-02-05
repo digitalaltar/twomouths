@@ -29,7 +29,7 @@ let imageX, imageY; // Center coordinates for the image
 let imgWidth, imgHeight; // Width and height of the resized image
 
 function preload() {
-  img = loadImage('twomouths.jpg'); // Load your image
+  img = loadImage('https://raw.githubusercontent.com/Digital-Altar/digital-altar.github.io/main/assets/images/background-speak.jpg'); // Load your image
 }
 
 function setup() {
@@ -57,11 +57,26 @@ function setup() {
   xPos = width;
 
   poemWidth = textWidth(poem);
+  
+  // Calculate scale based on the image dimensions and canvas size
+  scale = min(width / img.width, height / img.height);
+
+  // Update the image size immediately
+  img.resize(img.width * scale, img.height * scale);
+
+  // Calculate the position for the centered image
+  imageX = (width - img.width) / 2;
+  imageY = (height - img.height) / 2;
 }
 
 function draw() {
   background(0);
 
+  // Draw a black rectangle for the image background
+  fill(0);
+  noStroke();
+  rect(imageX, imageY, img.width, img.height);
+    
   // Chromatic aberration effect
   let shiftX = sin(frameCount * 0.01) * 20;
   let shiftY = cos(frameCount * 0.01) * 20;

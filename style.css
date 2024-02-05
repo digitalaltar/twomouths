@@ -1,7 +1,50 @@
 html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  background: black;
+  font-size: 1.3rem;
 }
 canvas {
   display: block;
+}
+section {
+  width: 100%:;
+}
+.about {
+  background: whitesmoke;
+  clear: both;
+  margin: 0 auto;
+  padding: 1% 5%;
+}
+.footer {
+  width: 100%;
+  background: whitesmoke;
+  margin: 0;
+}
+ul {
+  margin: 0 auto;
+  list-style: none;
+  text-align: right;
+  padding: 0px 30px 30px 30px;
+}
+ul li {
+  display: inline-block;
+  font-size: .7rem;
+  padding: 5px 20px;
+  background: lightgray;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+li:hover {
+  background: blue;
+}
+li:hover a {
+  color: white;
+}
+a {
+  color: blue;
+  text-decoration: none;
 }
