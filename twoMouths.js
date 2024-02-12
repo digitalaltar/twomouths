@@ -14,7 +14,7 @@ let imageX, imageY; // Center coordinates for the image
 let imgWidth, imgHeight; // Width and height of the resized image
 
 function preload() {
-  img = loadImage('background-speak.jpg'); // Load your image
+  img = loadImage('twomouths.jpg'); // Load your image
 }
 
 function setup() {
