@@ -2,25 +2,10 @@ let img; // Image variable
 let buffer; // Graphics buffer for drawing
 let xPos; // X position of the poem
 let poems = [ /* Array of poems */
-  `In the shadowed depths of speech's domain,
-Two mouths entwined, a subtle, cryptic game.
-An enigma veiled, a code switched and sought,
-In the realms of tongues, a delicate plot.`,
-
-  `One mouth, a vessel of eloquence so keen,
-With polished words, it reigns as it convenes.
-But hidden deep, in whispers undefined,
-The other mouth reveals what's left behind.`,
-
-  `With each switch, a shift, a seamless disguise,
-A code-switcher's art, where wisdom lies.
-In this dual existence, we find our way,
-In languages entwined, we navigate the fray.`,
-
-  `Two mouths, two paths, through shadows they roam,
-Cryptic and elusive, secrets to be known.
-A code-switcher's world, where meanings flow,
-In this cryptic dance of tongues, we'll always grow.`
+  `In the shadowed depths of speech's domain, Two mouths entwined, a subtle, cryptic game. An enigma veiled, a code switched and sought, In the realms of tongues, a delicate plot.
+  One mouth, a vessel of eloquence so keen, With polished words, it reigns as it convenes. But hidden deep, in whispers undefined, The other mouth reveals what's left behind.
+  With each switch, a shift, a seamless disguise, A code-switcher's art, where wisdom lies. In this dual existence, we find our way, In languages entwined, we navigate the fray.
+  Two mouths, two paths, through shadows they roam, Cryptic and elusive, secrets to be known. A code-switcher's world, where meanings flow, In this cryptic dance of tongues, we'll always grow.`
 ]; // Add more poems as needed
 
 let poem; // Variable to hold the selected poem
@@ -29,7 +14,7 @@ let imageX, imageY; // Center coordinates for the image
 let imgWidth, imgHeight; // Width and height of the resized image
 
 function preload() {
-  img = loadImage('https://raw.githubusercontent.com/Digital-Altar/digital-altar.github.io/main/assets/images/background-speak.jpg'); // Load your image
+  img = loadImage('background-speak.jpg'); // Load your image
 }
 
 function setup() {
@@ -51,8 +36,8 @@ function setup() {
   imageY = (height - img.height) / 2;
 
   poem = random(poems);
-  textSize(width / 10);
-  textLeading(width / 15);
+  textSize(width / 25);
+  textLeading(width / 30);
   textAlign(LEFT, CENTER);
   xPos = width;
 
@@ -88,10 +73,10 @@ function draw() {
   // Semi-transparent text
   fill(255, 255, 255, 100); // White color with semi-transparency
   // Draw the poem text twice for continuous repetition
-  text(poem, xPos, height / 1.3);
-  text(poem, xPos + poemWidth, height / 1.3);
+  text(poem, xPos, height / 1.2);
+  text(poem, xPos + poemWidth, height / 1.2);
 
-  xPos -= 2; // Move text to the left. Adjust speed as needed.
+  xPos -= 5; // Move text to the left. Adjust speed as needed.
 
   // Reset xPos to create a repeating scroll effect
   if (xPos < -poemWidth) {
